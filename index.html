@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Malcolm Elmiger — Medien, Kommunikation, Politik · Basel</title>
+<meta name="description" content="Malcolm Elmiger aus Basel: Studium der Medien- und Politikwissenschaft, mehrjährige Erfahrung in Kommunikation, Kampagnen, Gastronomie und am Empfang.">
+
+<link rel="canonical" href="https://www.malcolmelmiger.ch/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Malcolm Elmiger — Medien, Kommunikation, Politik · Basel">
+<meta property="og:description" content="Student der Medien- und Politikwissenschaft an der Universität Basel. Erfahrung in Kommunikation, Kampagnen, Gastronomie und am Empfang.">
+<meta property="og:url" content="https://www.malcolmelmiger.ch/">
+<meta property="og:locale" content="de_CH">
+<meta property="og:image" content="https://www.malcolmelmiger.ch/portrait.jpg">
+
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=Inter:wght@400;500;600&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#FBFAF8;
+    --ink:#15171C;
+    --muted:#5C6066;
+    --line:#E5E3DC;
+    --accent:#2230E0;
+    --accent-ink:#1A26B8;
+    --accent-soft:rgba(34,48,224,.07);
+    --maxw:1080px;
+    --display:"Space Grotesk",system-ui,sans-serif;
+    --body:"Inter",system-ui,sans-serif;
+    --mono:"Space Mono",ui-monospace,monospace;
+  }
+
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:var(--body);
+    font-size:17px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+
+  a{color:inherit}
+
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+  /* ---- mono utility label ---- */
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--accent-ink);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    margin:0 0 18px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:26px;height:1px;background:var(--accent);
+    display:inline-block;
+  }
+
+  /* ---- header ---- */
+  .site{
+    position:sticky;top:0;z-index:50;
+    background:color-mix(in srgb,var(--paper) 88%,transparent);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .site .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+  .brand{
+    font-family:var(--display);font-weight:700;letter-spacing:-.02em;
+    font-size:17px;text-decoration:none;
+  }
+  .brand b{color:var(--accent)}
+  .index{display:flex;gap:22px;font-family:var(--mono);font-size:12.5px;letter-spacing:.04em}
+  .index a{
+    text-decoration:none;color:var(--muted);padding:4px 0;
+    border-bottom:1px solid transparent;transition:color .18s,border-color .18s;
+  }
+  .index a:hover,.index a.active{color:var(--ink);border-color:var(--accent)}
+  @media (max-width:760px){
+    .index{display:none}
+  }
+
+  /* ---- sections ---- */
+  .section{padding:76px 0;border-top:1px solid var(--line)}
+  .section:first-of-type{border-top:0}
+  .section h2{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(26px,3.4vw,40px);letter-spacing:-.025em;
+    line-height:1.05;margin:0 0 36px;
+  }
+
+  /* ---- hero ---- */
+  .hero{padding:clamp(64px,11vw,128px) 0 84px}
+  .hero h1{
+    font-family:var(--display);font-weight:700;
+    font-size:clamp(44px,9.5vw,108px);
+    line-height:.96;letter-spacing:-.04em;
+    margin:0 0 28px;
+  }
+  .hero h1 .sur{color:var(--accent);display:block}
+  .lead{
+    font-size:clamp(19px,2.4vw,24px);
+    line-height:1.5;max-width:42ch;color:var(--ink);margin:0 0 36px;
+  }
+  .lead em{font-style:normal;color:var(--accent-ink);font-weight:600}
+
+  .actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:40px}
+  .btn{
+    font-family:var(--mono);font-size:13px;letter-spacing:.03em;
+    text-decoration:none;padding:13px 20px;border-radius:2px;
+    display:inline-flex;align-items:center;gap:9px;
+    border:1px solid var(--ink);transition:transform .15s,background .18s,color .18s,border-color .18s;
+  }
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn.primary:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
+  .btn.ghost:hover{background:var(--ink);color:var(--paper)}
+  .btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+  .facts{
+    display:flex;flex-wrap:wrap;gap:8px 28px;
+    font-family:var(--mono);font-size:12.5px;color:var(--muted);
+    letter-spacing:.03em;border-top:1px solid var(--line);padding-top:22px;max-width:46ch;
+  }
+  .facts span{white-space:nowrap}
+  .facts b{color:var(--ink);font-weight:700}
+
+  /* ---- hero portrait ---- */
+  .hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:start}
+  .portrait{
+    width:min(300px,32vw);aspect-ratio:1/1;object-fit:cover;
+    border-radius:3px;border:1px solid var(--line);
+    box-shadow:8px 8px 0 var(--accent-soft), 0 0 0 0 transparent;
+    margin-top:14px;
+  }
+  @media (max-width:760px){
+    .hero-grid{grid-template-columns:1fr;gap:28px}
+    .portrait{width:180px;margin-top:0;order:-1}
+  }
+
+  /* ---- timeline ---- */
+  .timeline{position:relative;margin-left:2px}
+  .job{
+    display:grid;grid-template-columns:120px 1fr;gap:28px;
+    padding:0 0 38px 26px;position:relative;border-left:2px solid var(--line);
+  }
+  .job:last-child{padding-bottom:0}
+  .job::before{
+    content:"";position:absolute;left:-7px;top:6px;
+    width:12px;height:12px;border-radius:50%;
+    background:var(--paper);border:2px solid var(--accent);
+  }
+  .job .when{font-family:var(--mono);font-size:13px;color:var(--accent-ink);padding-top:2px;letter-spacing:.02em}
+  .job h3{font-family:var(--display);font-weight:500;font-size:20px;letter-spacing:-.01em;margin:0 0 3px}
+  .job .org{color:var(--muted);font-size:15px;margin:0 0 12px}
+  .job ul{margin:0;padding-left:18px;color:var(--ink)}
+  .job li{margin:0 0 5px;font-size:15.5px;color:#33363c}
+  @media (max-width:620px){
+    .job{grid-template-columns:1fr;gap:8px}
+    .job .when{padding-top:0}
+  }
+
+  /* ---- generic two-up grids ---- */
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  @media (max-width:680px){.grid2{grid-template-columns:1fr}}
+
+  .card{border:1px solid var(--line);border-radius:3px;padding:24px;background:#fff}
+  .card h3{font-family:var(--display);font-weight:500;font-size:19px;margin:0 0 4px;letter-spacing:-.01em}
+  .card .org{color:var(--muted);font-size:14px;margin:0 0 12px;font-family:var(--mono);letter-spacing:.02em}
+  .card p{margin:0;font-size:15.5px;color:#33363c}
+  .card .grade{
+    font-family:var(--mono);font-size:12px;color:var(--accent-ink);
+    background:var(--accent-soft);padding:3px 9px;border-radius:2px;display:inline-block;margin-top:12px;letter-spacing:.04em;
+  }
+
+  /* ---- skills ---- */
+  .skillset{display:grid;grid-template-columns:repeat(2,1fr);gap:28px 40px}
+  @media (max-width:680px){.skillset{grid-template-columns:1fr}}
+  .skillset h3{font-family:var(--mono);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 14px}
+  .tags{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{
+    border:1px solid var(--line);border-radius:2px;padding:7px 12px;font-size:14px;
+    background:#fff;transition:border-color .15s,color .15s;
+  }
+  .tag:hover{border-color:var(--accent);color:var(--accent-ink)}
+
+  /* ---- languages ---- */
+  .langs{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  @media (max-width:680px){.langs{grid-template-columns:repeat(2,1fr)}}
+  .lang{border-top:2px solid var(--ink);padding-top:14px}
+  .lang .code{font-family:var(--mono);font-size:13px;color:var(--accent-ink);letter-spacing:.08em}
+  .lang .name{font-family:var(--display);font-size:19px;margin:2px 0 10px}
+  .lang .level{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.04em}
+  .dots{display:flex;gap:5px;margin-bottom:8px}
+  .dots i{width:9px;height:9px;border-radius:50%;background:var(--line)}
+  .dots i.on{background:var(--accent)}
+
+  /* ---- profil: radar + matrix ---- */
+  .radar-label{font-family:var(--mono);font-size:13px;fill:var(--ink);letter-spacing:.03em}
+  .radar-val{font-family:var(--mono);font-size:11px;fill:var(--accent-ink)}
+  .profil-note{font-family:var(--mono);font-size:12px;color:var(--muted);letter-spacing:.03em;margin-top:14px}
+
+  .matrix{
+    position:relative;border:1px solid var(--line);background:#fff;border-radius:3px;
+    aspect-ratio:1/1;max-width:560px;
+    background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+    background-size:25% 25%;
+  }
+  .mx-quad{position:absolute;font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);opacity:.7}
+  .mx-axis{font-family:var(--mono);font-size:11.5px;color:var(--muted);letter-spacing:.05em}
+  .mx-axis.x{text-align:center;margin-top:10px}
+  .mx-axis.y{writing-mode:vertical-rl;transform:rotate(180deg);position:absolute;left:-30px;top:50%;translate:0 -50%}
+  .mx-wrap{position:relative;padding-left:34px}
+  .mx-dot{position:absolute;translate:-50% 50%;cursor:default;outline:none}
+  .mx-dot i{
+    display:block;width:13px;height:13px;border-radius:50%;
+    background:var(--accent);border:2px solid #fff;box-shadow:0 0 0 1px var(--accent);
+    transition:transform .15s;
+  }
+  .mx-dot em{
+    position:absolute;left:16px;top:-3px;font-style:normal;
+    font-family:var(--mono);font-size:11px;color:var(--ink);white-space:nowrap;letter-spacing:.02em;
+  }
+  .mx-dot b{
+    position:absolute;bottom:calc(100% + 10px);left:50%;translate:-50% 0;
+    background:var(--ink);color:var(--paper);font-weight:400;
+    font-size:12.5px;line-height:1.45;padding:9px 12px;border-radius:3px;
+    width:max-content;max-width:230px;text-align:left;
+    opacity:0;pointer-events:none;transition:opacity .15s;z-index:5;
+  }
+  .mx-dot:hover i,.mx-dot:focus-visible i{transform:scale(1.35)}
+  .mx-dot:hover b,.mx-dot:focus-visible b{opacity:1}
+  .mx-dot:focus-visible i{box-shadow:0 0 0 3px var(--accent-soft),0 0 0 1px var(--accent)}
+  @media (max-width:680px){.mx-dot em{display:none}}
+
+  /* ---- footer ---- */
+  .foot{border-top:1px solid var(--line);background:var(--ink);color:var(--paper)}
+  .foot .wrap{padding:72px 28px}
+  .foot .eyebrow{color:#9aa0ff}
+  .foot .eyebrow::before{background:#9aa0ff}
+  .foot h2{font-family:var(--display);font-weight:700;font-size:clamp(28px,5vw,52px);letter-spacing:-.03em;line-height:1;margin:0 0 28px}
+  .foot a.mail{color:var(--paper);text-decoration:none;border-bottom:2px solid #9aa0ff;padding-bottom:2px}
+  .foot a.mail:hover{border-color:var(--paper)}
+  .foot .frow{display:flex;flex-wrap:wrap;gap:10px 32px;font-family:var(--mono);font-size:13px;color:#b9bcc6;margin-top:30px;letter-spacing:.03em}
+  .foot .frow a{color:#b9bcc6;text-decoration:none}
+  .foot .frow a:hover{color:var(--paper)}
+  .colophon{margin-top:48px;font-family:var(--mono);font-size:11px;color:#6b6f7e;letter-spacing:.05em}
+
+  /* ---- reveal ---- */
+  .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}
+  .reveal.in{opacity:1;transform:none}
+  @media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <a class="brand" href="#top">Malcolm<b>.</b>Elmiger</a>
+    <nav class="index" aria-label="Abschnitte">
+      <a href="#werdegang">Werdegang</a>
+      <a href="#ausbildung">Ausbildung</a>
+      <a href="#faehigkeiten">Fähigkeiten</a>
+      <a href="#profil-viz">Profil</a>
+      <a href="#sprachen">Sprachen</a>
+      <a href="#engagement">Engagement</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero wrap" id="profil">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow reveal">Medien · Kommunikation · Politik</p>
+        <h1 class="reveal">Malcolm<span class="sur">Elmiger</span></h1>
+      </div>
+      <picture class="reveal">
+        <source srcset="/portrait.webp" type="image/webp">
+        <img class="portrait" src="/portrait.jpg" alt="Porträt von Malcolm Elmiger" width="720" height="720" loading="eager">
+      </picture>
+    </div>
+    <div class="actions reveal">
+      <a class="btn primary" href="mailto:info@malcolmelmiger.ch">E-Mail schreiben →</a>
+      <a class="btn ghost" href="/Lebenslauf.pdf">Lebenslauf (PDF)</a>
+    </div>
+    <div class="facts reveal">
+      <span><b>Empfang</b> &amp; Kommunikation</span>
+      <span><b>4</b> Sprachen</span>
+      <span><b>Gastronomie</b> im Nachtbetrieb</span>
+      <span><b>Kampagnen</b> &amp; Civil Society</span>
+    </div>
+  </section>
+
+  <!-- WERDEGANG -->
+  <section class="section wrap" id="werdegang">
+    <p class="eyebrow reveal">01 — Werdegang</p>
+    <h2 class="reveal">Berufliche Erfahrung</h2>
+    <div class="timeline">
+
+      <article class="job reveal">
+        <div class="when">2024 — 2025</div>
+        <div>
+          <h3>Mitarbeiter Empfang &amp; Etagenservice</h3>
+          <p class="org">Alterspflegeheim Humanitas, Riehen</p>
+          <ul>
+            <li>Tägliche Ansprechperson für Bewohnende, Angehörige und externe Gäste</li>
+            <li>Koordination von Anliegen, Korrespondenz, Terminplanung und Kassenverwaltung</li>
+            <li>Etagenservice: Servieren der Mahlzeiten sowie Mitarbeit bei Banketten und Anlässen</li>
+            <li>Diskreter Umgang mit sensiblen und persönlichen Daten</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="when">2022 — 2023</div>
+        <div>
+          <h3>Assistant Regional Manager</h3>
+          <p class="org">Zero Waste Switzerland, Basel / Morges</p>
+          <ul>
+            <li>Koordination regionaler Projekte und Mitgliederaktivitäten</li>
+            <li>Strategie zur Akquise und Bindung von Einzel- und Kollektivmitgliedern</li>
+            <li>Durchführung von Schulungen zur Kreislaufwirtschaft</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="when">2021 — 2022</div>
+        <div>
+          <h3>Social Media Manager — Abstimmungskampagnen</h3>
+          <p class="org">Syna – die Gewerkschaft, Basel</p>
+          <ul>
+            <li>Konzeption und Umsetzung von Social-Media-Inhalten für politische Abstimmungskampagnen</li>
+            <li>Digitale Mobilisierung und zielgruppenspezifische Ansprache</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="when">2021</div>
+        <div>
+          <h3>Praktikant — Politische Kampagnen</h3>
+          <p class="org">Syna – die Gewerkschaft, Basel</p>
+          <ul>
+            <li>Mitarbeit im Abstimmungskomitee Mindestlohn Basel</li>
+            <li>Entwicklung und Pflege der Onlinepräsenz</li>
+            <li>Kampagnenarbeit zu prekären Berufen</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="when">2020</div>
+        <div>
+          <h3>Kampagnenkoordinator Nordwestschweiz</h3>
+          <p class="org">Dachverband Travail Suisse, Basel</p>
+          <ul>
+            <li>Regionale Umsetzung der Abstimmungskampagne für den Vaterschaftsurlaub</li>
+            <li>Social-Media-Kampagne, Pressearbeit und Imagewerbung</li>
+            <li>Netzwerkfunktion zwischen Politik, Verband und Bevölkerung</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="when">2019 — 2021</div>
+        <div>
+          <h3>Social Media Manager</h3>
+          <p class="org">Sprachschule inlingua, Basel</p>
+          <ul>
+            <li>Umsetzung der Social-Media-Strategie für eine internationale Kundschaft</li>
+            <li>Pflege der Website mit Online-Buchung und Kursübersichten</li>
+            <li>Aufbau und Versand des Firmennewsletters (Mailchimp)</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="when">2016 — 2018</div>
+        <div>
+          <h3>Verantwortlicher Netzwerk</h3>
+          <p class="org">Verein Riviera, Basel</p>
+          <ul>
+            <li>Entwicklung eines Empfehlungsnetzwerks als Rubrik einer Online-Kulturplattform</li>
+            <li>Akquise und Abwicklung von Werbeeinträgen</li>
+            <li>Bewerbung von Netzwerkeinträgen sowie Planung von Printwerbung</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="when">2014 — 2016</div>
+        <div>
+          <h3>Barmitarbeiter — Basler Kulturbetrieb</h3>
+          <p class="org">SUD Club &amp; KaBar (Zischbar), Basel</p>
+          <ul>
+            <li>Longdrinks und klassische Cocktails im stark frequentierten Nachtclub sowie wöchentlicher Barbetrieb der Zischbar</li>
+            <li>Mise en place, effiziente Serviceabläufe und Ausschank bei hohem Gästeaufkommen</li>
+            <li>Betreuung eines diversen Publikums und Mitgestaltung einer offenen, inklusiven Atmosphäre im Event- und Kulturbetrieb</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="job reveal">
+        <div class="when">2011</div>
+        <div>
+          <h3>Service-Mitarbeiter</h3>
+          <p class="org">Restaurant Eichholz, Bern</p>
+          <ul>
+            <li>Saisonaler Gastronomiebetrieb an der Aare mit Gästebetreuung im Aussenbereich</li>
+            <li>Unterstützung im laufenden Tagesgeschäft sowie Vorbereitung und Ordnung</li>
+          </ul>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- AUSBILDUNG -->
+  <section class="section wrap" id="ausbildung">
+    <p class="eyebrow reveal">02 — Ausbildung</p>
+    <h2 class="reveal">Universität Basel</h2>
+    <div class="grid2">
+      <article class="card reveal">
+        <h3>B.A. Medienwissenschaft</h3>
+        <p class="org">Universität Basel · 2018 — 2026</p>
+        <p>Schwerpunkt auf Mediensystemen, Kommunikation und digitaler Öffentlichkeit.</p>
+        <span class="grade">Notenschnitt Ø 5.0</span>
+      </article>
+      <article class="card reveal">
+        <h3>B.A. Politikwissenschaft</h3>
+        <p class="org">Universität Basel · 2018 — 2026</p>
+        <p>Vergleichende Politik, empirische Methoden und quantitative Analyse.</p>
+        <span class="grade">Notenschnitt Ø 6.0</span>
+      </article>
+    </div>
+  </section>
+
+  <!-- FÄHIGKEITEN -->
+  <section class="section wrap" id="faehigkeiten">
+    <p class="eyebrow reveal">03 — Werkzeuge</p>
+    <h2 class="reveal">Fähigkeiten</h2>
+    <div class="skillset">
+      <div class="reveal">
+        <h3>Web &amp; Content</h3>
+        <div class="tags">
+          <span class="tag">WordPress</span><span class="tag">Typo3</span>
+          <span class="tag">SEO</span><span class="tag">Content-Pflege</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3>Bild &amp; Video</h3>
+        <div class="tags">
+          <span class="tag">Photoshop</span><span class="tag">InDesign</span>
+          <span class="tag">Premiere Pro</span><span class="tag">Canva</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3>Programmierung</h3>
+        <div class="tags">
+          <span class="tag">R</span><span class="tag">Python</span><span class="tag">LaTeX</span>
+        </div>
+      </div>
+      <div class="reveal">
+        <h3>Projektmanagement</h3>
+        <div class="tags">
+          <span class="tag">Slack</span><span class="tag">Trello</span><span class="tag">Mailchimp</span>
+          <span class="tag">SocialPilot</span><span class="tag">Google Analytics</span><span class="tag">MS Teams</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFIL: RADAR + MATRIX -->
+  <section class="section wrap" id="profil-viz">
+    <p class="eyebrow reveal">04 — Profil</p>
+    <h2 class="reveal">Kompetenzprofil</h2>
+    <div class="grid2" style="gap:48px;align-items:start">
+
+      <div class="reveal">
+        <h3 style="font-family:var(--mono);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 18px">Überblick</h3>
+        <svg viewBox="0 0 460 470" role="img" aria-label="Kompetenzprofil als Netzdiagramm" style="width:100%;height:auto">
+      <polygon points="230.0,207.0 258.6,223.5 258.6,256.5 230.0,273.0 201.4,256.5 201.4,223.5" fill="none" stroke="var(--line)" stroke-width="1"/>
+      <polygon points="230.0,174.0 287.2,207.0 287.2,273.0 230.0,306.0 172.8,273.0 172.8,207.0" fill="none" stroke="var(--line)" stroke-width="1"/>
+      <polygon points="230.0,141.0 315.7,190.5 315.7,289.5 230.0,339.0 144.3,289.5 144.3,190.5" fill="none" stroke="var(--line)" stroke-width="1"/>
+      <polygon points="230.0,108.0 344.3,174.0 344.3,306.0 230.0,372.0 115.7,306.0 115.7,174.0" fill="none" stroke="var(--line)" stroke-width="1"/>
+      <polygon points="230.0,75.0 372.9,157.5 372.9,322.5 230.0,405.0 87.1,322.5 87.1,157.5" fill="none" stroke="var(--line)" stroke-width="1"/>
+      <line x1="230" y1="240" x2="230.0" y2="75.0" stroke="var(--line)" stroke-width="1"/>
+      <line x1="230" y1="240" x2="372.9" y2="157.5" stroke="var(--line)" stroke-width="1"/>
+      <line x1="230" y1="240" x2="372.9" y2="322.5" stroke="var(--line)" stroke-width="1"/>
+      <line x1="230" y1="240" x2="230.0" y2="405.0" stroke="var(--line)" stroke-width="1"/>
+      <line x1="230" y1="240" x2="87.1" y2="322.5" stroke="var(--line)" stroke-width="1"/>
+      <line x1="230" y1="240" x2="87.1" y2="157.5" stroke="var(--line)" stroke-width="1"/>
+      <polygon points="230.0,75.0 358.6,165.8 358.6,314.2 230.0,372.0 115.7,306.0 130.0,182.2" fill="rgba(34,48,224,.10)" stroke="var(--accent)" stroke-width="2" stroke-linejoin="round"/>
+      <circle cx="230.0" cy="75.0" r="4" fill="var(--accent)"/>
+      <circle cx="358.6" cy="165.8" r="4" fill="var(--accent)"/>
+      <circle cx="358.6" cy="314.2" r="4" fill="var(--accent)"/>
+      <circle cx="230.0" cy="372.0" r="4" fill="var(--accent)"/>
+      <circle cx="115.7" cy="306.0" r="4" fill="var(--accent)"/>
+      <circle cx="130.0" cy="182.2" r="4" fill="var(--accent)"/>
+      <text x="230.0" y="47.0" text-anchor="middle" dominant-baseline="middle" class="radar-label">Kommunikation</text>
+      <text x="230.0" y="63.0" text-anchor="middle" class="radar-val">5 / 5</text>
+      <text x="397.1" y="143.5" text-anchor="start" dominant-baseline="middle" class="radar-label">Organisation</text>
+      <text x="397.1" y="159.5" text-anchor="start" class="radar-val">4.5 / 5</text>
+      <text x="397.1" y="336.5" text-anchor="start" dominant-baseline="middle" class="radar-label">Netzwerken</text>
+      <text x="397.1" y="352.5" text-anchor="start" class="radar-val">4.5 / 5</text>
+      <text x="230.0" y="433.0" text-anchor="middle" dominant-baseline="middle" class="radar-label">Analyse</text>
+      <text x="230.0" y="449.0" text-anchor="middle" class="radar-val">4 / 5</text>
+      <text x="62.9" y="336.5" text-anchor="end" dominant-baseline="middle" class="radar-label">Kreativität</text>
+      <text x="62.9" y="352.5" text-anchor="end" class="radar-val">4 / 5</text>
+      <text x="62.9" y="143.5" text-anchor="end" dominant-baseline="middle" class="radar-label">Technik</text>
+      <text x="62.9" y="159.5" text-anchor="end" class="radar-val">3.5 / 5</text>
+        </svg>
+        <p class="profil-note">Selbsteinschätzung, Skala 1–5 · gestützt auf Arbeitszeugnisse &amp; Projekterfahrung</p>
+      </div>
+
+      <div class="reveal">
+        <h3 style="font-family:var(--mono);font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 18px">Werkzeuge im Einsatz</h3>
+        <div class="mx-wrap">
+          <span class="mx-axis y">Einsatzhäufigkeit →</span>
+          <div class="matrix">
+            <span class="mx-quad" style="right:10px;top:8px">Kernwerkzeuge</span>
+            <span class="mx-quad" style="left:10px;bottom:8px">Grundlagen</span>
+          <span class="mx-dot" style="left:83.0%;bottom:79.4%" tabindex="0" aria-label="Social Media: Syna, Travail Suisse, inlingua — Kampagnen & Redaktion"><i></i><em>Social Media</em><b>Syna, Travail Suisse, inlingua — Kampagnen & Redaktion</b></span>
+          <span class="mx-dot" style="left:66.5%;bottom:58.4%" tabindex="0" aria-label="WordPress: Websitepflege inlingua, Onlinepräsenz Syna"><i></i><em>WordPress</em><b>Websitepflege inlingua, Onlinepräsenz Syna</b></span>
+          <span class="mx-dot" style="left:44.5%;bottom:50.0%" tabindex="0" aria-label="Mailchimp: Firmennewsletter inlingua aufgebaut & versendet"><i></i><em>Mailchimp</em><b>Firmennewsletter inlingua aufgebaut & versendet</b></span>
+          <span class="mx-dot" style="left:50.0%;bottom:66.8%" tabindex="0" aria-label="R: Quantitative Methoden im Politikstudium"><i></i><em>R</em><b>Quantitative Methoden im Politikstudium</b></span>
+          <span class="mx-dot" style="left:39.0%;bottom:54.2%" tabindex="0" aria-label="Python: Datenanalyse im Studium"><i></i><em>Python</em><b>Datenanalyse im Studium</b></span>
+          <span class="mx-dot" style="left:61.0%;bottom:75.2%" tabindex="0" aria-label="LaTeX: Seminar- & Abschlussarbeiten"><i></i><em>LaTeX</em><b>Seminar- & Abschlussarbeiten</b></span>
+          <span class="mx-dot" style="left:72.0%;bottom:41.6%" tabindex="0" aria-label="Photoshop: Visuals für Kampagnen & Social Media"><i></i><em>Photoshop</em><b>Visuals für Kampagnen & Social Media</b></span>
+          <span class="mx-dot" style="left:61.0%;bottom:33.2%" tabindex="0" aria-label="InDesign: Print- & Kampagnenmaterial"><i></i><em>InDesign</em><b>Print- & Kampagnenmaterial</b></span>
+          <span class="mx-dot" style="left:50.0%;bottom:45.8%" tabindex="0" aria-label="Google Analytics: Auswertung Website & Newsletter inlingua"><i></i><em>Google Analytics</em><b>Auswertung Website & Newsletter inlingua</b></span>
+          <span class="mx-dot" style="left:66.5%;bottom:83.6%" tabindex="0" aria-label="Trello / Slack: Projektkoordination Zero Waste, Syna"><i></i><em>Trello / Slack</em><b>Projektkoordination Zero Waste, Syna</b></span>
+          </div>
+          <p class="mx-axis x">Jahre Erfahrung →</p>
+        </div>
+        <p class="profil-note">Punkt antippen oder mit der Maus berühren für Kontext</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- SPRACHEN -->
+  <section class="section wrap" id="sprachen">
+    <p class="eyebrow reveal">05 — Sprachen</p>
+    <h2 class="reveal">Sprachkenntnisse</h2>
+    <div class="langs">
+      <div class="lang reveal">
+        <div class="code">DE</div><div class="name">Deutsch</div>
+        <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+        <div class="level">Muttersprache</div>
+      </div>
+      <div class="lang reveal">
+        <div class="code">EN</div><div class="name">Englisch</div>
+        <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></div>
+        <div class="level">C2 — verhandlungssicher</div>
+      </div>
+      <div class="lang reveal">
+        <div class="code">FR</div><div class="name">Français</div>
+        <div class="dots"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i></div>
+        <div class="level">C1 — fliessend</div>
+      </div>
+      <div class="lang reveal">
+        <div class="code">IT</div><div class="name">Italiano</div>
+        <div class="dots"><i class="on"></i><i class="on"></i><i></i><i></i><i></i></div>
+        <div class="level">A2 — Grundkenntnisse</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ENGAGEMENT -->
+  <section class="section wrap" id="engagement">
+    <p class="eyebrow reveal">06 — Engagement</p>
+    <h2 class="reveal">Ehrenamt &amp; Politik</h2>
+    <div class="grid2">
+      <article class="card reveal">
+        <h3>GRÜNE Basel-Stadt</h3>
+        <p class="org">Vorstand · Co-Leitung Gleichstellung · 2022 — 2025</p>
+        <p>Vernehmlassung zum Gesetzesentwurf zu Lohngleichheitsanalysen; Kandidatur bei den Grossratswahlen 2020 und 2024 im Wahlkreis Kleinbasel.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Fachgruppe Politikwissenschaft</h3>
+        <p class="org">Mitgründer &amp; Co-Präsident · Universität Basel · 2018 — 2020</p>
+        <p>Organisations- und Koordinationsaufgaben im Auftrag der Studierenden; Veranstaltungen für Studierende und Aufbau einer Austauschplattform mit dem Fachbereich.</p>
+      </article>
+      <article class="card reveal">
+        <h3>Create Equality, Basel</h3>
+        <p class="org">Projektmitarbeit · 2017 — 2025</p>
+        <p>Informationsveranstaltungen mit Politik, Verwaltung und Zivilgesellschaft; Bedarfsanalysen und Positionspapiere.</p>
+      </article>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot" id="kontakt">
+  <div class="wrap">
+    <p class="eyebrow reveal">07 — Kontakt</p>
+    <h2 class="reveal">Sprechen wir.</h2>
+    <p class="reveal" style="font-size:20px;max-width:34ch;margin:0">
+      Offen für Aufgaben in Kommunikation, Empfang, Gastronomie und Kampagnen.
+      Am schnellsten erreichst du mich per <a class="mail" href="mailto:info@malcolmelmiger.ch">E-Mail</a>.
+    </p>
+    <div class="frow reveal">
+      <a href="mailto:info@malcolmelmiger.ch">info@malcolmelmiger.ch</a>
+      <a href="tel:+41766301566">+41 76 630 15 66</a>
+      <span>Basel, Schweiz</span>
+    </div>
+    <p class="colophon">© <span id="yr"></span> Malcolm Elmiger · Gebaut mit HTML &amp; CSS · Gehostet bei Hostpoint</p>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  // Scroll reveal
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var items = document.querySelectorAll('.reveal');
+  if (reduce || !('IntersectionObserver' in window)) {
+    items.forEach(function(el){ el.classList.add('in'); });
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); }
+      });
+    }, {threshold:0.12, rootMargin:'0px 0px -8% 0px'});
+    items.forEach(function(el){ io.observe(el); });
+  }
+
+  // Active nav highlight
+  var navlinks = Array.prototype.slice.call(document.querySelectorAll('.index a'));
+  var sections = navlinks.map(function(a){ return document.querySelector(a.getAttribute('href')); });
+  if ('IntersectionObserver' in window) {
+    var spy = new IntersectionObserver(function(entries){
+      entries.forEach(function(e){
+        if (e.isIntersecting){
+          var id = '#' + e.target.id;
+          navlinks.forEach(function(a){ a.classList.toggle('active', a.getAttribute('href') === id); });
+        }
+      });
+    }, {rootMargin:'-40% 0px -55% 0px'});
+    sections.forEach(function(s){ if (s) spy.observe(s); });
+  }
+</script>
+</body>
+</html>
