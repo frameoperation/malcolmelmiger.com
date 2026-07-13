@@ -12,7 +12,6 @@
 <meta property="og:description" content="Student der Medien- und Politikwissenschaft an der Universität Basel. Erfahrung in Kommunikation, Kampagnen, Gastronomie und am Empfang.">
 <meta property="og:url" content="https://www.malcolmelmiger.ch/">
 <meta property="og:locale" content="de_CH">
-<meta property="og:image" content="https://www.malcolmelmiger.ch/portrait.jpg">
 
 <link rel="icon" href="/favicon.svg" type="image/svg+xml">
 
@@ -130,27 +129,6 @@
   .btn.primary:hover{background:var(--accent-ink);border-color:var(--accent-ink)}
   .btn.ghost:hover{background:var(--ink);color:var(--paper)}
   .btn:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-
-  .facts{
-    display:flex;flex-wrap:wrap;gap:8px 28px;
-    font-family:var(--mono);font-size:12.5px;color:var(--muted);
-    letter-spacing:.03em;border-top:1px solid var(--line);padding-top:22px;max-width:46ch;
-  }
-  .facts span{white-space:nowrap}
-  .facts b{color:var(--ink);font-weight:700}
-
-  /* ---- hero portrait ---- */
-  .hero-grid{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:start}
-  .portrait{
-    width:min(300px,32vw);aspect-ratio:1/1;object-fit:cover;
-    border-radius:3px;border:1px solid var(--line);
-    box-shadow:8px 8px 0 var(--accent-soft), 0 0 0 0 transparent;
-    margin-top:14px;
-  }
-  @media (max-width:760px){
-    .hero-grid{grid-template-columns:1fr;gap:28px}
-    .portrait{width:180px;margin-top:0;order:-1}
-  }
 
   /* ---- timeline ---- */
   .timeline{position:relative;margin-left:2px}
@@ -278,7 +256,6 @@
       <a href="#profil-viz">Profil</a>
       <a href="#sprachen">Sprachen</a>
       <a href="#engagement">Engagement</a>
-      <a href="#kontakt">Kontakt</a>
     </nav>
   </div>
 </header>
@@ -287,25 +264,11 @@
 
   <!-- HERO -->
   <section class="hero wrap" id="profil">
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow reveal">Medien · Kommunikation · Politik</p>
-        <h1 class="reveal">Malcolm<span class="sur">Elmiger</span></h1>
-      </div>
-      <picture class="reveal">
-        <source srcset="/portrait.webp" type="image/webp">
-        <img class="portrait" src="/portrait.jpg" alt="Porträt von Malcolm Elmiger" width="720" height="720" loading="eager">
-      </picture>
-    </div>
+    <p class="eyebrow reveal">Medien · Kommunikation · Politik</p>
+    <h1 class="reveal">Malcolm<span class="sur">Elmiger</span></h1>
     <div class="actions reveal">
       <a class="btn primary" href="mailto:info@malcolmelmiger.ch">E-Mail schreiben →</a>
       <a class="btn ghost" href="/Lebenslauf.pdf">Lebenslauf (PDF)</a>
-    </div>
-    <div class="facts reveal">
-      <span><b>Empfang</b> &amp; Kommunikation</span>
-      <span><b>4</b> Sprachen</span>
-      <span><b>Gastronomie</b> im Nachtbetrieb</span>
-      <span><b>Kampagnen</b> &amp; Civil Society</span>
     </div>
   </section>
 
@@ -611,19 +574,8 @@
 
 </main>
 
-<footer class="foot" id="kontakt">
+<footer class="foot">
   <div class="wrap">
-    <p class="eyebrow reveal">07 — Kontakt</p>
-    <h2 class="reveal">Sprechen wir.</h2>
-    <p class="reveal" style="font-size:20px;max-width:34ch;margin:0">
-      Offen für Aufgaben in Kommunikation, Empfang, Gastronomie und Kampagnen.
-      Am schnellsten erreichst du mich per <a class="mail" href="mailto:info@malcolmelmiger.ch">E-Mail</a>.
-    </p>
-    <div class="frow reveal">
-      <a href="mailto:info@malcolmelmiger.ch">info@malcolmelmiger.ch</a>
-      <a href="tel:+41766301566">+41 76 630 15 66</a>
-      <span>Basel, Schweiz</span>
-    </div>
     <p class="colophon">© <span id="yr"></span> Malcolm Elmiger · Gebaut mit HTML &amp; CSS · Gehostet bei Hostpoint</p>
   </div>
 </footer>
