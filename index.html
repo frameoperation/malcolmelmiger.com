@@ -44,8 +44,10 @@
   "url": "https://www.malcolmelmiger.ch/",
   "email": "mailto:info@malcolmelmiger.ch",
   "sameAs": [
-    "https://linkedin.com/in/malcolm-elmiger",
-    "https://twitter.com/malcolm_elmiger"
+    "https://www.facebook.com/malcolmelmiger",
+    "https://www.instagram.com/malcolmelmiger/",
+    "https://www.linkedin.com/in/malcolm-elmiger-16040917a/",
+    "https://github.com/frameoperation"
   ],
   "knowsAbout": ["Kommunikation", "Politikwissenschaft", "Kampagnenmanagement", "Social Media", "Content Management"],
   "worksFor": {
@@ -270,8 +272,8 @@
   .foot a.mail{color:var(--paper);text-decoration:none;border-bottom:2px solid #9aa0ff;padding-bottom:2px}
   .foot a.mail:hover{border-color:var(--paper)}
   .foot .frow{display:flex;flex-wrap:wrap;gap:10px 32px;font-family:var(--mono);font-size:13px;color:#b9bcc6;margin-top:30px;letter-spacing:.03em}
-  .foot .frow a{color:#b9bcc6;text-decoration:none}
-  .foot .frow a:hover{color:var(--paper)}
+  .foot .frow a{color:#b9bcc6;text-decoration:none;border-bottom:1px solid transparent;transition:border-color .18s}
+  .foot .frow a:hover{color:var(--paper);border-bottom-color:#b9bcc6}
   .colophon{margin-top:48px;font-family:var(--mono);font-size:11px;color:#6b6f7e;letter-spacing:.05em}
 
   /* ---- reveal ---- */
@@ -613,6 +615,12 @@
 <footer class="foot">
   <div class="wrap">
     <p class="colophon">© <span id="yr"></span> Malcolm Elmiger · Gebaut mit HTML &amp; CSS · Gehostet bei Hostpoint</p>
+    <div class="frow">
+      <a href="https://www.facebook.com/malcolmelmiger" title="Facebook Profil">Facebook</a>
+      <a href="https://www.instagram.com/malcolmelmiger/" title="Instagram Profil">Instagram</a>
+      <a href="https://www.linkedin.com/in/malcolm-elmiger-16040917a/" title="LinkedIn Profil">LinkedIn</a>
+      <a href="https://github.com/frameoperation" title="GitHub Profil">GitHub</a>
+    </div>
   </div>
 </footer>
 
